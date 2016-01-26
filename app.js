@@ -5,13 +5,24 @@ var pikePlace = {
   averageCookies: 5.2,
   hourlySales: [],
   totalSales: 0,
-}
-  pikePlace.generateRandomcust = function(){
-    return Math.random() * (pikePlace.maximumCustomers - pikePlace.minimumCustomers) + pikePlace.minimumCustomers;
-}
-  pikePlace.generateaverageCookies = function(){
-    return Math.random() * pikePlace.averageCookies + pikePlace.hourlySales
-  }
+
+    generateRandomcust:  function() {
+    return Math.random() * (this.maximumCustomers - this.minimumCustomers) + this.minimumCustomers;
+    },
+    generatehourlySales: function() {
+      for (var i = 0; i < hours.length; i++) {
+        var randomCookies = Math.floor(this.averageCookies * this.generateRandomcust());
+        this.hourlySales.push(randomCookies)
+        this.totalSales = this.hourlySales.reduce(function(a, b) {
+          return a + b;
+        });
+      }
+    }
+};
+console.log(pikePlace.generateRandomcust());
+console.log(pikePlace.generatehourlySales());
+console.log(pikePlace.hourlySales)
+console.log(pikePlace.totalSales);
 // console.log(pikePlace.minimumCustomers)
 // console.log(pikePlace.generateRandom(pikePlace.minimumCustomers, pikePlace.maximumCustomers));
 //
