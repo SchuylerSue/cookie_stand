@@ -5,7 +5,6 @@ var pikePlace = {
   averageCookies: 5.2,
   hourlySales: [],
   totalSales: 0,
-
     generateRandomcust:  function() {
     return Math.random() * (this.maximumCustomers - this.minimumCustomers) + this.minimumCustomers;
     },
@@ -16,7 +15,6 @@ var pikePlace = {
         this.totalSales = this.hourlySales.reduce(function(a, b) {
           return a + b;
         });
-
     pikePlace.generateaverageCookies: function () {
     return Math.floor(Math)
     pikePlace.gethourlySales: function () {
