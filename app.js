@@ -5,6 +5,16 @@ var pikePlace = {
   averageCookies: 5.2,
   hourlySales: [],
   totalSales: 0,
+var sectionEl = document.getElementById('myList');
+var ulEl = document.createElement('ul');
+
+for (hours in hourlySales) {
+  var liEl = document.createElement('li');
+  liEl.textContent = hourlySales[hours];
+  var nestedUlEl = document.createElement('li');
+
+for ()
+}
     generateRandomcust:  function() {
     return Math.random() * (this.maximumCustomers - this.minimumCustomers) + this.minimumCustomers;
     },
@@ -25,6 +35,28 @@ var pikePlace = {
       console.log(pikePlace.hourlySales)
       console.log(pikePlace.totalSales);
     });
+    var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    var weeks = [1, 2, 3, 4];
+    var sectionEl = document.getElementById('myList');
+    var ulEl = document.createElement('ul');
+
+    for(month in months) {
+      var liEl = document.createElement('li');
+      liEl.textContent = months[month];
+      var nestedUlEl = document.createElement('ul');
+
+      for(week in weeks) {
+        var nestedLiEl = document.createElement('li');
+        nestedLiEl.textContent = weeks[week];
+        nestedUlEl.appendChild(nestedLiEl);
+      }
+
+      liEl.appendChild(nestedUlEl);
+      ulEl.appendChild(liEl);
+    }
+
+    sectionEl.appendChild(ulEl);
+  });
 
 //       for (var i = 0; i < pikePlace.length; i++){
 //         + pikePlace (minimumCustomers [i], maximumCustomers [i], averageCookies [i], hourlySales [i], totalSales [i]))
