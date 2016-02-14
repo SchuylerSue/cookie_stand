@@ -8,12 +8,6 @@ var pikePlace = {
 var sectionEl = document.getElementById('myList');
 var ulEl = document.createElement('ul');
 
-for (hours in hourlySales) {
-  var liEl = document.createElement('li');
-  liEl.textContent = hourlySales[hours];
-  var nestedUlEl = document.createElement('li');
-
-for ()
 }
     generateRandomcust:  function() {
     return Math.random() * (this.maximumCustomers - this.minimumCustomers) + this.minimumCustomers;
@@ -34,5 +28,25 @@ for ()
       console.log(pikePlace.generatehourlySales());
       console.log(pikePlace.hourlySales)
       console.log(pikePlace.totalSales);
+      function Store(name, cookiesSold, hourlySales){
+        this.store = pikePlace;
+        this.cookiesSold = totalSales;
+        this.hourSales =
+      }
+
+
+// var names = ['scott', 'sam', 'erin', 'bj'];
+// var heights = [72, 80, 60, 48];
+// var hairColor = ['brown', 'blonde', 'blonde', 'brown'];
+// var ages = [26, 33, 23, 45];
+//
+// for (var i = 0; i < names.length; i++) {
+//   new Person(names[i], heights[i], hairColor[i], ages[i]);
+// }
+
+      // for (hours in hourlySales) {
+      //   var liEl = document.createElement('li');
+      //   liEl.textContent = hourlySales[hours];
+      //   var nestedUlEl = document.createElement('li');
+      // for (
     });
-  
